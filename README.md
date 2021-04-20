@@ -1,2 +1,3 @@
-# student-list 
-This repo is a simple application to list student with a webserver (PHP) and API (Flask)
+# 4DEVOP PROJET - ZAKI & LAMKADEM
+A repository of: 
+Student-List Web-app DEPLOYMENT using Docker-compose, Jenkins, Ansible + MONITORING system using DataDog and Splunk. 
