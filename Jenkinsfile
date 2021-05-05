@@ -1,33 +1,12 @@
-@Library('jenkins-shared-library')_
+node {
 
-pipeline {
-    agent none
-    stages {
-        stage('Check python syntax') {
-            agent { docker { image 'eeacms/pylint' } }
-            steps {
-                sh 'pylint  \${WORKSPACE}/simple_api/student_age.py'
-            }
-        }
-        stage('Check docker-compose syntax') {
-            agent { docker { image 'docker/compose' } }
-            steps {
-                sh 'docker-compose -f \${WORKSPACE}/docker-compose.yml config'
-            }
-        }
-        stage('Check Dockerfile syntax') {
-            agent { docker { image 'hadolint/hadolint' } }
-            steps {
-                sh 'hadolint \${WORKSPACE}/simple_api/Dockerfile'
-            }
-        }
-    }
-    post {
-    always {
-       script {
-         clean
-         slackNotifier currentBuild.result
-     }
-    }
+    checkout scm
+
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-id') {
+
+        def customImage = docker.build("hzsupinfo/4devop-projet")
+
+        /* Push the container to the custom Registry */
+        customImage.push()
     }
 }
