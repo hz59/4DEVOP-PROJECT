@@ -9,7 +9,7 @@ node {
         customImage.push()
     } */
     stage('Deploy') {
-                sh 'sudo docker-compose build'
-                sh 'sudo docker-compose up -d'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d'
         }
 }
