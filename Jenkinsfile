@@ -9,7 +9,7 @@ node {
         customImage.push()
     } */
     environment {
-        PATH = "$PATH:</usr/local/bin/>"
+        PATH = "$PATH:/usr/local/bin/"
     }
     stage('Deploy') {
                 sh 'docker-compose build'
