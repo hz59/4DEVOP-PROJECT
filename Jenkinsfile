@@ -8,10 +8,10 @@ node {
 
         customImage.push()*/
     } 
-    stage('Deploy') {
+    /*stage('Deploy') {
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
-        }
+        }*/
     stage('Deploy with Ansible') {
                 sh 'ansible-playbook -i hosts student_list.yml'
         }
