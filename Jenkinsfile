@@ -4,7 +4,7 @@ node {
 
     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-id') {
 
-        def customImage = docker.build("hzsupinfo/projet-DEVOP-ZL")
+        def customImage = docker.build("hzsupinfo/projet-devop-zl")
 
         customImage.push()
     } 
