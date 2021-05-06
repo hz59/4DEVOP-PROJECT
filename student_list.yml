@@ -1,0 +1,21 @@
+---
+- hosts: app
+  become: true
+  tasks:
+    - name: Deploy Student List webapp 
+      docker_container:
+        name: pozos-website
+        hostname: pozos-website
+        image: hzsupinfo/4devop-projet
+        state: started
+        ports:
+          - "8080:8080"
+    - name: Deploy POZOS API
+      docker_container:
+        name: pozos-api
+        hostname: pozos-api 
+        image: hzsupinfo/4devop-projet
+        state: started
+        ports:
+          - "80:80"
+...
