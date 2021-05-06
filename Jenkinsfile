@@ -18,12 +18,5 @@ node {
                 sh 'ansible-playbook -i hosts install.yml' 
                 sh 'ansible-playbook -i hosts student_list.yml'
         }
-    pipeline {
-        stage('analyze') {
-                steps {
-                    writeFile file: "anchore_images", text: "docker.io/hzsupinfo/projet-devop-zl:${BUILD_ID}"
-                    anchore name: 'anchore_images',bailOnFail: true, bailOnPluginFail: true
-                }
-            }
     } 
 }
