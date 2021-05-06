@@ -8,7 +8,7 @@ node {
 
         customImage.push()
     } 
-    stage('Build & Run') {
+    stage('Build') {
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
               /*  sh 'docker container run pozos-api'
