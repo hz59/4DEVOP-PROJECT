@@ -4,9 +4,9 @@ node {
 
     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-id') {
 
-     /*   def customImage = docker.build("hzsupinfo/projet-devop-zl")
+        def customImage = docker.build("hzsupinfo/projet-devop-zl")
 
-        customImage.push() */
+        customImage.push() 
     }
     stage('Build') {
                 /*sh 'docker-compose build'
