@@ -11,8 +11,8 @@ node {
     stage('Build') {
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
-               /* sh 'docker run pozos-api'
-                sh 'docker run pozos-website-1.3' */
+                sh 'docker container run pozos-api'
+                sh 'docker container run pozos-website' 
         }
     stage('Deploy with Ansible') {
                /* sh 'ansible-playbook -i hosts deploy.yml' */
