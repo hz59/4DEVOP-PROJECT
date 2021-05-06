@@ -6,30 +6,29 @@
   
   pre_tasks:
     - name: Install epel-release
-      apt:
+      yum:
         name: epel-release
         state: latest
     - name: Install python pip
-      apt:
+      yum:
         name: python-pip
         state: latest
     - name: Install docker-py
       pip:
         name: docker-py
-
   tasks:
     - name: Install yum utils
-      apt:
+      yum:
         name: yum-utils
         state: latest
 
     - name: Install device-mapper-persistent-data
-      apt:
+      yum:
         name: device-mapper-persistent-data
         state: latest
 
     - name: Install lvm2
-      apt:
+      yum:
         name: lvm2
         state: latest
 
