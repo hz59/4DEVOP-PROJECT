@@ -7,7 +7,10 @@ node {
         def customImage = docker.build("hzsupinfo/projet-devop-zl")
 
         customImage.push()
-    } 
+    }
+    stage('Restart docker') {
+                sh 'sudo service docker restart'
+        }
     stage('Build') {
                 /*sh 'docker-compose build'
                 sh 'docker-compose up -d'*/
