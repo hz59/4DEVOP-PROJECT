@@ -1,12 +1,8 @@
 node {
     
-    def newApp
-    def registry = 'hzsupinfo/projet-devop-zl'
-    def registryCredential = 'dockerhub-id'
-
     checkout scm
 
-    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-id') {
+    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
 
         def customImage = docker.build("hzsupinfo/projet-devop-zl")
 
