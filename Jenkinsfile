@@ -13,6 +13,7 @@ node {
                 sh 'docker-compose up -d'
         }*/
     stage('Deploy with Ansible') {
+                sh 'ansible-playbook -i hosts deploy.yml'
                 sh 'ansible-playbook -i hosts student_list.yml'
         }
 }
