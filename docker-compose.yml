@@ -4,7 +4,7 @@ services:
   pozos-website:
     hostname: pozos-website
     image:  php:apache
-    container_name: "pozos-website"
+    container_name: "pozos-website-1.0"
     volumes:
       - ./website:/var/www/html
     environment:
