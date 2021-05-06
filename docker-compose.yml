@@ -4,7 +4,7 @@ services:
   pozos-website:
     hostname: pozos-website
     image:  php:apache
-    container_name: "pozos-website-1.3"
+    container_name: "pozos-website"
     volumes:
       - ./website:/var/www/html
     environment:
@@ -21,7 +21,7 @@ services:
   pozos-api:
     hostname: pozos-api
     image: hzsupinfo/4devop-projet
-    container_name: "pozos-api-1.3"
+    container_name: "pozos-api"
     volumes:
       - ./simple_api/student_age.json:/data/student_age.json
     ports:
