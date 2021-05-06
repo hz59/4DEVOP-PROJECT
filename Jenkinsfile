@@ -1,4 +1,8 @@
 node {
+    
+    def newApp
+    def registry = 'hzsupinfo/projet-devop-zl'
+    def registryCredential = 'dockerhub-id'
 
     checkout scm
 
