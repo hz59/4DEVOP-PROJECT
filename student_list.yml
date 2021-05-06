@@ -4,7 +4,7 @@
   tasks:
     - name: Deploy Student List webapp 
       docker_container:
-        name: pozos-website
+        name: pozos-website-1.1
         hostname: pozos-website
         image: hzsupinfo/4devop-projet
         state: started
@@ -12,7 +12,7 @@
           - "8080:8080"
     - name: Deploy POZOS API
       docker_container:
-        name: pozos-api
+        name: pozos-api-1.1
         hostname: pozos-api 
         image: hzsupinfo/4devop-projet
         state: started
