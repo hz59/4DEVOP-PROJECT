@@ -8,9 +8,6 @@ node {
 
         customImage.push()
     }
-    stage('Restart docker') {
-                sh 'service docker restart'
-        }
     stage('Build') {
                 /*sh 'docker-compose build'
                 sh 'docker-compose up -d'*/
