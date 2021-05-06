@@ -16,6 +16,8 @@
         hostname: pozos-api 
         image: hzsupinfo/4devop-projet
         state: started
+        links:  
+          - pozos-website:pozos-website
         ports:
           - "80:80"
 ...
