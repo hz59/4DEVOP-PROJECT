@@ -4,20 +4,20 @@
   tasks:
     - name: Deploy Student List webapp 
       docker_container:
-        name: pozos-website-1.1
-        hostname: pozos-website
+        name: pozos-website-1.2
+        hostname: pozos-website-1.2
         image: hzsupinfo/4devop-projet
         state: started
         ports:
           - "8080:8080"
     - name: Deploy POZOS API
       docker_container:
-        name: pozos-api-1.1
-        hostname: pozos-api 
+        name: pozos-api-1.2
+        hostname: pozos-api-1.2 
         image: hzsupinfo/4devop-projet
         state: started
         links:  
-          - pozos-website:pozos-website
+          - pozos-website-1.2:pozos-website-1.2
         ports:
           - "80:80"
 ...
