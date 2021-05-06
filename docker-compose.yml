@@ -20,7 +20,7 @@ services:
   # API
   pozos-api:
     hostname: pozos-api
-    image: api-pozos:0.1
+    image: hzsupinfo/projet-devop-zl:latest
     container_name: "pozos-api"
     volumes:
       - ./simple_api/student_age.json:/data/student_age.json
