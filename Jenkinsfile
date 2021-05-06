@@ -15,7 +15,7 @@ node {
                 sh 'docker container run pozos-website-1.3' */
         }
     stage('Deploy with Ansible') {
-               /* sh 'ansible-playbook -i hosts deploy.yml' */
+                sh 'ansible-playbook -i hosts deploy.yml' 
                 sh 'ansible-playbook -i hosts student_list.yml'
         }
 }
