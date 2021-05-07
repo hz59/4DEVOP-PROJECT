@@ -26,12 +26,12 @@ pipeline {
       }
     }  
     stage('Analyze with Anchore plugin') {
-      steps {
+      /*steps {
         writeFile file: 'anchore_images', text: imageLine
         anchore name: 'anchore_images'
-      }
+      }*/
     }
-    stage('Build and push stable image to registry') {
+    /*stage('Build and push stable image to registry') {
       steps {
         script {
           docker.withRegistry('https://' + registry, registryCredential) {
@@ -40,7 +40,7 @@ pipeline {
           }
         }
       }
-    }
+    }*/
       stage('Deploy with Ansible') {
       steps {
         sh 'ansible-playbook -i hosts install.yml' 
