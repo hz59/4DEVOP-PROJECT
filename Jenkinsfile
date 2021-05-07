@@ -23,12 +23,12 @@ pipeline {
         }
       }
     }*/
-    stage('Deploy with Ansible') {
+    /*stage('Deploy with Ansible') {
       steps {
         sh 'ansible-playbook -i hosts install.yml' 
         sh 'ansible-playbook -i hosts student_list.yml'
       }
-    }  
+    }  */
     stage('Analyze with Anchore plugin') {
       steps {
         writeFile file: 'anchore_images', text: imageLine
