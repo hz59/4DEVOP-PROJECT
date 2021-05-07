@@ -12,8 +12,8 @@ pipeline {
         checkout scm
       }
     }
-    stage('Build image and push to registry') {
-      /*steps {
+    /*stage('Build image and push to registry') {
+      steps {
         sh 'docker --version'
         script {
           docker.withRegistry('https://' + registry, registryCredential) {
@@ -21,8 +21,8 @@ pipeline {
             image.push()
           }
         }
-      }*/
-    }
+      }
+    }*/
     stage('Deploy with Ansible') {
       steps {
         sh 'ansible-playbook -i hosts install.yml' 
