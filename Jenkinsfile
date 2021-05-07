@@ -25,12 +25,12 @@ pipeline {
         }
       }
     }  
-    stage('Analyze with Anchore plugin') {
-      /*steps {
+    /*stage('Analyze with Anchore plugin') {
+      steps {
         writeFile file: 'anchore_images', text: imageLine
         anchore name: 'anchore_images'
-      }*/
-    }
+      }
+    }*/
     /*stage('Build and push stable image to registry') {
       steps {
         script {
