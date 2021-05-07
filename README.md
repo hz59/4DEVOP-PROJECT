@@ -1,6 +1,6 @@
 ------
 # 4DEVOP PROJET - ZAKI & LAMKADEM
--- Master Of Science 1 - SUPINFO International University
+-- Master Of Science 1 - SUPINFO International University.
 -- 2021.
 -------
 A repository of: 
