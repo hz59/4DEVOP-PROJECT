@@ -14,8 +14,9 @@ pipeline {
     }
     stage('Build image and push to registry') {
       steps {
-        sh 'docker --version'
-        sh ''
+       /* sh 'docker --version'
+        sh 'docker build .'
+        sh '/usr/local/bin/docker-compose up -d' */
         script {
           docker.withRegistry('https://' + registry, registryCredential) {
             def image = docker.build(repository)
