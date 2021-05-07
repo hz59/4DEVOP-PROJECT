@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = 'registry.hub.docker.com'
-    registryCredential = 'dockerhub-registry'
+    registryCredential = 'dockerhub'
     repository = 'hzsupinfo/projet-devop-zl'
     imageLine = 'registry.hub.docker.com/hzsupinfo/projet-devop-zl:latest'
   }
