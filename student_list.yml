@@ -14,7 +14,7 @@
       docker_container:
         name: pozos-api
         hostname: pozos-api
-        image: hzsupinfo/projet-devop-zl:latest
+        image: pozos-api
         state: started
         ports:
           - "80:80"
