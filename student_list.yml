@@ -17,7 +17,7 @@
       docker_container:
         name: pozos-api
         hostname: pozos-api
-        image: manumazu/api-pozos
+        image: hzsupinfo/projet-devop-zl:latest
         state: started
         ports:
           - "4000:5000"
