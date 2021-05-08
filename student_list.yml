@@ -10,4 +10,15 @@
         state: started
         ports:
           - "8002:80"
+        environnement: 
+          USERNAME: "toto"
+          PASSWORD: "python"
+    - name: Deploy POZOS API
+      docker_container:
+        name: pozos-api
+        hostname: pozos-api
+        image: api-pozos:0.1
+        state: started
+        ports:
+          - "4000:5000"
 ...
