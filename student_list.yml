@@ -6,16 +6,8 @@
       docker_container:
         name: pozos-website
         hostname: pozos-website
-        image: php:apache
+        image: hzsupinfo / projet-devop-zl:latest
         state: started
         ports:
           - "8002:80"
-    - name: Deploy POZOS API
-      docker_container:
-        name: pozos-api
-        hostname: pozos-api
-        image: pozos-api
-        state: started
-        ports:
-          - "80:80"
 ...
