@@ -47,10 +47,10 @@ pipeline {
         sh 'ansible-playbook -i hosts student_list.yml'
       }
     }
-    stage('Scanning') {
+    /*stage('Scanning') {
          steps {
             arachniScanner checks: '*', scope: [pageLimit: 3], url: 'http://192.168.56.102:8085', userConfig: [filename: 'myConfiguration.json'], format: 'json'
          }
-      }
+      }*/
   }
 }
