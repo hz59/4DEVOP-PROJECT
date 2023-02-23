@@ -1,11 +1,9 @@
 ------
-# 4DEVOP PROJET - ZH & LS
--- Master Of Science 1 - SUPINFO International University.
+# 4DEVOP PROJET - hz59
 -- 2021.
 -------
 A repository of: 
 POZOS WEBAPP Deployment using Docker-compose, Jenkins, Ansible, Anchore, Arachni ngrok + MONITORING system using DataDog. 
-
 
 Files:
 
@@ -18,5 +16,3 @@ Files:
 - student_age.json: The data content for the Dockerfile.
 - student_age.py: The python API of Student_list.
 - student_list.yml: Ansible PLAYBOOK of the deployment of POZOS website.
-
-
